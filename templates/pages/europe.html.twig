@@ -1,0 +1,46 @@
+{% set page_asset = 'pays/europe' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Europe - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/europe.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="bvn">
+  <h1>Bienvenue en Europe !</h1>
+  <h1>Découvrez les plus belles destinations européennes avec notre compagnie de voyage de rêve !</h1>
+</div>
+
+<div class="fra">
+  <h2>Envie de découvrir le charme de la France ?</h2>
+  <p>
+    L'Hexagone vous tend les bras ! Venez découvrir un terroir riche et une gastronomie vantée comme une des meilleures au monde !
+    Des petites bourgades de Franche-Comté à l'urbaine Paris, ville de l'Amour, découvrez également de nombreux monuments plus beaux les uns que les autres,
+    avec comme clou du spectacle la Tour Eiffel !
+  </p>
+  <a href="#" class="btnfra">Découvrir la France</a>
+</div>
+
+<div class="esp">
+  <h2>Envie de découvrir la beauté de l'Espagne ?</h2>
+  <p>
+    Le pays de la paella et de la sangria vous attend ! Entre plages de sable fin, montagnes majestueuses et villes vibrantes,
+    l'Espagne est une destination incontournable pour les amateurs de soleil et de culture.
+    Ne manquez pas la Sagrada Familia à Barcelone et le flamenco à Séville !
+  </p>
+  <a href="#" class="btnesp">Découvrir l'Espagne</a>
+</div>
+
+<div class="ita">
+  <h3>Envie de découvrir la chaleur de l'Italie ?</h3>
+  <p>
+    La dolce vita vous attend ! Des canaux de Venise aux ruines de Rome, en passant par les paysages pittoresques de la Toscane,
+    l'Italie est un véritable musée à ciel ouvert. Savourez des pâtes fraîches et du vin local tout en admirant la beauté de ce pays.
+  </p>
+  <a href="#" class="btnita">Découvrir l'Italie</a>
+</div>
+{% endblock %}

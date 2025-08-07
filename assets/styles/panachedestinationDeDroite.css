@@ -1,0 +1,108 @@
+/* Panache de destinations sur le côté droit de l'écran */
+.destination-panache {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes, ajuster si besoin */
+    gap: 20px;
+    opacity: 0;
+    animation: panacheGridAnimation 3s ease-in-out forwards;
+  }
+  
+  .destination-panache p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(20px) rotate(0deg); /* Position initiale */
+    animation: fadeUpDiagonal 1s ease-in-out forwards;
+  }
+  
+  /* Animation pour faire apparaître le panache */
+  @keyframes panacheGridAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation pour chaque destination avec un effet de mouvement et de rotation */
+  @keyframes fadeUpDiagonal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) rotate(45deg); /* Légère rotation initiale */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg); /* Retour à la position normale */
+    }
+  }
+  
+  /* Délai pour chaque destination afin qu'elles apparaissent dans l'ordre */
+  .destination-panache p:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .destination-panache p:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .destination-panache p:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .destination-panache p:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .destination-panache p:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .destination-panache p:nth-child(6) {
+    animation-delay: 1s;
+  }
+  .destination-panache p:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  .destination-panache p:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  .destination-panache p:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+  .destination-panache p:nth-child(10) {
+    animation-delay: 1.8s;
+  }
+  .destination-panache p:nth-child(11) {
+    animation-delay: 2s;
+  }
+  .destination-panache p:nth-child(12) {
+    animation-delay: 2.2s;
+  }
+  .destination-panache p:nth-child(13) {
+    animation-delay: 2.4s;
+  }
+  .destination-panache p:nth-child(14) {
+    animation-delay: 2.6s;
+  }
+  .destination-panache p:nth-child(15) {
+    animation-delay: 2.8s;
+  }
+  
+  /* Optionnel : Ajuster l'orientation de certains textes pour plus de variété */
+  .destination-panache p:nth-child(odd) {
+    transform: rotate(45deg);
+  }
+  
+  .destination-panache p:nth-child(even) {
+    transform: rotate(-45deg);
+  }
+  
+  /* Ajouter un effet de mouvement léger au survol (optionnel) */
+  .destination-panache p:hover {
+    transform: scale(1.1) rotate(10deg); /* Légère augmentation de taille et rotation */
+    transition: transform 0.3s ease-in-out;
+  }
+  

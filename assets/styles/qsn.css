@@ -1,0 +1,45 @@
+@keyframes translate{
+    from{transform: translateX(-10vw)}
+    to{transform: translateX(100vw)}
+}
+.avion{
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+
+html, body{
+    height: 100%;
+}
+nav{
+    background: yellow;
+    /* color: green; */
+}
+body{
+    background: rgba(172, 255, 47, 0.486);
+}
+.mot_par_mot{
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;  
+    font-size: 3rem;
+    color: #4B0082;
+    text-decoration: underline;
+    /* text-shadow: #4B0082; */
+    height: 50%;
+}
+img{
+    grid-area: img;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}

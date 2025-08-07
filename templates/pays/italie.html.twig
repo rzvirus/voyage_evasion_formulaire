@@ -1,0 +1,54 @@
+{% set page_asset = 'pays/italie' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Italie - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/italie.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <section class="hero">
+    <h1>Découvrez l'Italie</h1>
+    <p>Explorez les merveilles de la culture italienne, de la cuisine délicieuse et des paysages à couper le souffle.</p>
+    <p>Et son magnifique hymne national :</p>
+    <audio src="{{ asset('audio/Hymne_italien.mp3') }}" controls></audio>
+  </section>
+
+  <section>
+    <h2>À propos de l'Italie</h2>
+    <p>
+      L'Italie, en forme longue la République italienne, est un État souverain d'Europe du Sud.<br>
+      Son territoire comprend une partie continentale, une péninsule située au centre de la mer Méditerranée ainsi qu'une partie insulaire constituée par la Sicile et la Sardaigne, et d'autres îles plus petites.<br>
+      Elle est rattachée au reste du continent par le massif des Alpes.<br>
+      Le pays possède des frontières terrestres avec la France, la Suisse, l'Autriche et la Slovénie ainsi que des frontières internes avec Saint-Marin et le Vatican.<br>
+      En 2024, l'Italie compte 58 989 749 habitants et a une superficie de 302 073 km².
+    </p>
+    <p>Que vous soyez passionné d'histoire, amateur de cuisine ou amoureux de la nature, l'Italie a quelque chose à offrir à chacun.</p>
+  </section>
+
+  <section class="destinations">
+    <h2>Destinations en Italie</h2>
+    <ul>
+      <li class="dest1"><a href="https://romesite.fr">Rome</a></li>
+      <li class="dest1"><a href="https://florencesite.fr/que_faire_a_florence.html">Florence</a></li>
+      <li class="dest1"><a href="https://visitervenise.fr">Venise</a></li>
+      <li class="dest1"><a href="https://milansite.fr">Milan</a></li>
+      <li class="dest1"><a href="https://visiternaples.fr">Naples</a></li>
+    </ul>
+  </section>
+
+  <section class="Photo">
+    <h2>Galerie Photo</h2>
+    <div class="gallery">
+      <img src="{{ asset('images/Italie_1.jpg') }}" alt="Image 1" height="175px" width="300px">
+      <img src="{{ asset('images/Italie_2.jpg') }}" alt="Image 2" height="175px" width="300px">
+      <img src="{{ asset('images/Italie_3.jpg') }}" alt="Image 3" height="175px" width="300px">
+      <img src="{{ asset('images/Italie_4.jpg') }}" alt="Image 4" height="175px" width="300px">
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Admin{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+  <!-- 1. En-tête et bouton de déconnexion -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Bienvenue Admin {{ app.user.username }}</h2>
+    <a href="{{ path('app_logout') }}" class="btn btn-outline-secondary">Déconnexion</a>
+  </div>
+
+  <!-- 2. Card historique de connexions -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span>Historique des connexions</span>
+          <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#connexionsList">
+            Voir plus
+          </button>
+        </div>
+        <div id="connexionsList" class="collapse show">
+          <ul class="list-group list-group-flush">
+            {% for c in connexions %}
+              <li class="list-group-item">
+                {{ c.utilisateur.username }}
+                {% if c.dateConnexion %}
+                  connecté à {{ c.dateConnexion|date('H:i:s') }}
+                {% endif %}
+                {% if c.dateDeconnexion %}
+                  - déconnecté à {{ c.dateDeconnexion|date('H:i:s') }}
+                {% else %}
+                  <span class="text-muted">aucune déconnexion</span>
+                {% endif %}
+              </li>
+            {% else %}
+              <li class="list-group-item">Aucune connexion enregistrée.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Card historique des messages -->
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-header">Section des messages</div>
+        <div class="card-body">
+          {% for msg in app.flashes('success') %}
+            <div class="alert alert-success">{{ msg }}</div>
+          {% endfor %}
+          {% for msg in app.flashes('warning') %}
+            <div class="alert alert-warning">{{ msg }}</div>
+          {% endfor %}
+          {% for msg in app.flashes('danger') %}
+            <div class="alert alert-danger">{{ msg }}</div>
+          {% endfor %}
+
+          {% if messages is empty %}
+            <p>Aucun message à traiter.</p>
+          {% else %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Auteur</th>
+                  <th>Contenu</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for m in messages %}
+                  <tr>
+                    <td>{{ m.auteur.username }}</td>
+                    <td>{{ m.contenu|slice(0, 30) ~ (m.contenu|length > 30 ? '...' : '') }}</td>
+                    <td>{{ m.dateEnvoi ? m.dateEnvoi|date('d/m/Y H:i') : '' }}</td>
+                    <td>{{ m.status }}</td>
+                    <td>
+                      <form action="{{ path('admin_message_valide', {'id': m.id}) }}" method="post" style="display:inline;">
+                        <button class="btn btn-success btn-sm">Valider</button>
+                      </form>
+                      <form action="{{ path('admin_message_refuse', {'id': m.id}) }}" method="post" style="display:inline;">
+                        <button class="btn btn-warning btn-sm">Refuser</button>
+                      </form>
+                      <form action="{{ path('admin_message_delete', {'id': m.id}) }}" method="post" style="display:inline;">
+                        <button class="btn btn-danger btn-sm">Supprimer</button>
+                      </form>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+.side-text-left {
+    position: fixed;
+    top:  0;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: 'Lucida Sans', sans-serif;
+    opacity: 0.8;
+    animation: fadeInLeft 2s ease-in-out infinite alternate;
+  }
+  
+  .side-text-left p {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) translateY(-120px); /* Départ depuis la gauche */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(200px) translateY(-120px); /* Arrêt à la position finale */
+    }
+  }
+  
+  .side-text-left {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: 'Lucida Sans', sans-serif;
+    opacity: 0.8;
+    animation: fadeInLeft 2s ease-in-out forwards; /* 'forwards' fait que l'animation reste à la fin */
+  }
+  
+  .side-text-left p {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .side-text-left p:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .side-text-left p:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .side-text-left p:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .side-text-left p:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .side-text-left p:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  

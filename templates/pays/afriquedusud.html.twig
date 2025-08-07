@@ -1,0 +1,81 @@
+{% set page_asset = 'pays/afriquedusud' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Afrique du Sud - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/afriquedusud.css') }}">
+  <link rel="icon" href="{{ asset('images/faviconads.png') }}">
+{% endblock %}
+
+{% block body %}
+<nav class="retour">
+  <a href="{{ path('destinations') }}">Destinations</a><p>></p>
+  <a href="{{ path('afrique') }}">Afrique</a><p>></p>
+  <p>Afrique du Sud</p>
+</nav>
+
+<main class="mainindex">
+  <div class="presentation">
+    <h1>Welcome to South Africa!</h1>
+    <img src="{{ asset('images/ads.png') }}" class="imageamerique" alt="Drapeau Afrique du Sud">
+  </div>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/safari.jpeg') }}" class="imagearticle" alt="Safari">
+    <div class="divarticle">
+      <h2>Des safaris spectaculaires :</h2>
+      <p class="textarticle">
+        Observer lions, éléphants, rhinocéros et léopards dans leur habitat naturel.<br>
+        Notamment dans des parcs célèbres comme Kruger, c'est une expérience inoubliable pour les amoureux de la faune sauvage.
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville1"><h3 class="nomville">Parc National Kruger</h3></div>
+    <div class="ville2"><h3 class="nomville">Réserve Sabi Sand</h3></div>
+    <div class="ville3"><h3 class="nomville">Réserve de Madikwe</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <div class="divarticle">
+      <h2>Une diversité de paysages exceptionnelle :</h2>
+      <p class="textarticle">
+        De la Montagne de la Table au Cap, aux plages sauvages de l'océan Indien, en passant par les vignes de Stellenbosch et le désert du Karoo, l'Afrique du Sud offre des décors incroyablement variés à découvrir.
+      </p>
+    </div>
+    <img src="{{ asset('images/bonnesperence.jpg') }}" class="imagearticle right" alt="Bonne Espérance">
+  </article>
+
+  <section class="villes">
+    <div class="ville4"><h3 class="nomville">Montagne de la Table</h3></div>
+    <div class="ville5"><h3 class="nomville">Désert de Karoo</h3></div>
+    <div class="ville6"><h3 class="nomville">Vignes de Stellenbosch</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/lecap.png') }}" class="imagearticle" alt="Le Cap">
+    <div class="divarticle">
+      <h2>Une richesse culturelle et historique :</h2>
+      <p class="textarticle">
+        Avec ses influences africaines, européennes et asiatiques, son histoire marquée par l'apartheid et sa reconstruction inspirante, l'Afrique du Sud propose des rencontres humaines fortes et une culture vibrante à explorer.
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville7"><h3 class="nomville">Le Cap</h3></div>
+    <div class="ville8"><h3 class="nomville">Johannesburg</h3></div>
+    <div class="ville9"><h3 class="nomville">Durban</h3></div>
+  </section>
+</main>
+{% endblock %}

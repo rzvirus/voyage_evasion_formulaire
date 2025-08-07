@@ -1,0 +1,75 @@
+@keyframes translate{
+    from{transform: translateX(-10vw)}
+    to{transform: translateX(100vw)}
+}
+.avion{
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: larger;
+    color: #ffeeee;
+    }
+
+.grille {
+    display: grid;
+    grid-template-areas: 
+        "titre titre titre"
+        "culture culture campagne"
+        "gastronomie gastronomie gastronomie";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .titre {
+    grid-area: titre;
+    text-align: center;
+    background: url(../images/ha_long_bay.jpg) no-repeat center center/cover;
+    text-align: center;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 15px;
+    padding: 10px;
+    }
+
+    .campagne {
+    grid-area: campagne;
+    background: url(../images/sapa_vietnam.jpg) no-repeat center center/cover;
+    text-align: right;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+    }
+
+    .culture {
+    grid-area: culture;
+    background: url(../images/culture-vietnamienne.jpg) no-repeat center center/cover;
+    text-align: left;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+    }
+
+    .gastronomie {
+    grid-area: gastronomie;
+    background: url(../images/pho.jpg) no-repeat center center/cover;
+    text-align:start;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+    }
+

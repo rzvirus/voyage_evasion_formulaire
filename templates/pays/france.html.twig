@@ -1,0 +1,47 @@
+{% set page_asset = 'pays/france' %}
+{% extends 'base.html.twig' %}
+
+
+{% block title %}France - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/france.css') }}">
+{% endblock %}
+
+{% block body %}
+<section>
+  <h2>🇫🇷 Un patrimoine riche</h2>
+  <p>De la tour Eiffel aux châteaux de la Loire, la France regorge de trésors historiques à explorer.</p>
+</section>
+
+<section>
+  <h2>🥐 Art de vivre</h2>
+  <p>Goûtez aux saveurs uniques de la gastronomie française : vins raffinés, fromages et pâtisseries inoubliables.</p>
+</section>
+
+<section>
+  <h2>🌄 Des paysages variés</h2>
+  <p>Entre plages méditerranéennes, montagnes alpines et campagnes verdoyantes, chaque région vous offre un nouveau décor.</p>
+</section>
+
+<footer>
+  <p>La France vous attend pour une escapade inoubliable, entre élégance, passion et découverte.</p>
+  <a href="https://www.france.fr/fr/" target="_blank">👉 Et voilà le guide pour cette magnifique visite de la France</a>
+</footer>
+
+<h2>Voici quelques images :</h2>
+<div class="image-container">
+  <a href="https://fr.wikipedia.org/wiki/Arc_de_triomphe_de_l%27Étoile">
+    <img src="{{ asset('images/arc_triumph.jpg') }}" alt="Arc de Triomphe">
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Tour_Eiffel">
+    <img src="{{ asset('images/Tour_Eiffel_Wikipedia.jpg') }}" alt="Tour Eiffel">
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Mont_Saint-Michel">
+    <img src="{{ asset('images/Mont_Saint_Michel.jpeg') }}" alt="Mont Saint-Michel">
+  </a>
+</div>
+{% endblock %}

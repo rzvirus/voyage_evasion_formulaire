@@ -1,0 +1,105 @@
+@keyframes translate{
+    from{transform: translateX(-10vw)}
+    to{transform: translateX(100vw)}
+}
+
+.menu{
+    background-color: rgb(0, 0, 0);
+}
+.menu ul li {
+    color: #ffffff;
+  }
+.avion{
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+h2{
+    text-align: center;
+    margin: 3rem 0;
+    text-decoration: underline;
+    color: red;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "Europe Asie"
+        "Amerique Afrique"
+        "Iles Iles";
+    grid-template-rows: 250px 250px 250px;
+    gap: 20px;
+    margin: 0 auto;
+    place-items: center;
+    width: 100%;
+    min-height: 60vh ;
+    place-items: stretch; 
+}
+
+.grid_country{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+.europe{
+    grid-area: Europe;
+    background: url(../images/fond_europe.png), #9e9d9d;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.asie {
+    grid-area: Asie;
+    background: url(../images/fond_asie.png), #9e9d9df1;
+    background-size: contain;
+    background-position: center;
+}
+
+.amerique {
+    grid-area: Amerique;
+    background: url(../images/fond_usa.png),  #9e9d9df1;
+    background-size: contain;
+    background-position: center;
+}
+
+.afrique {
+    grid-area: Afrique;
+    background: url(../images/fond_afrique.png),  #9e9d9df1;
+    background-size: contain;
+}
+
+.iles {
+    grid-area: Iles;
+    grid-template-rows: 2;
+    background: url(../images/fond_iles.png),  #9e9d9df1;
+    background-size: contain;
+}
+
+.centrer{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+footer{
+    a, a:hover, a:visited, a:active, a:link {
+    color: black;
+    font-size: 1.5rem;
+}}

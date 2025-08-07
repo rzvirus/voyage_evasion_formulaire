@@ -1,0 +1,39 @@
+security:
+    password_hashers:
+        App\Entity\Utilisateur:
+            algorithm: auto
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\Utilisateur
+                property: email
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            lazy: true
+            provider: app_user_provider
+            form_login:
+                login_path: login      # Utilise /connexion au lieu de /login
+                check_path: login      # Même route pour la vérification
+                enable_csrf: true
+                default_target_path: app_espace_membre
+                always_use_default_target_path: false
+            logout:
+                path: app_logout
+                target: app_logged_out
+
+    access_control:
+        # ✅ Routes publiques (syntaxe moderne)
+        - { path: ^/login, roles: PUBLIC_ACCESS }
+        - { path: ^/register, roles: PUBLIC_ACCESS }
+        - { path: ^/logged-out, roles: PUBLIC_ACCESS }
+        - { path: ^/$, roles: PUBLIC_ACCESS }  # Page d'accueil
+
+        # ✅ Routes sécurisées
+        - { path: ^/espace-membre, roles: ROLE_USER }
+        - { path: ^/espace-admin, roles: ROLE_ADMIN }

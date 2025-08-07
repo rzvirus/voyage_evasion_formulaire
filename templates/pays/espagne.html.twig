@@ -1,0 +1,71 @@
+{% set page_asset = 'pays/espagne' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Espagne - Univers du Voyage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/espagne.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>
+  <p>
+    <span class="l1">E</span>
+    <span class="l2">S</span>
+    <span class="l3">P</span>
+    <span class="l4">A</span>
+    <span class="l5">G</span>
+    <span class="l6">N</span>
+    <span class="l7">E</span>
+    <img src="{{ asset('images/espagne.gif') }}" alt="Image Vacance Espagne">
+  </p>
+</h1>
+
+<div class="image1">
+  <img src="{{ asset('images/espagne.jpg') }}" alt="Image Vacance Espagne">
+</div>
+
+<hr class="separateur">
+
+<div class="texteez">
+  <h2>10 bonnes raisons d'aller en Espagne</h2>
+</div>
+
+<hr class="separateur">
+
+<h3>Le soleil et le peuple chaleureux ne sont pas les seuls atouts de l'Espagne, bien loin de là !</h3>
+<h5>Découvrez 10 bonnes raisons de plier bagage et d'y aller...</h5>
+
+{% set raisons = [
+  ['PASSER LA SOIRÉE DANS UNE BODEGA', "Plus de 500 bodegas (caves à vin) couvrent le territoire de La Rioja. On peut les visiter et y déguster d'excellents vins."],
+  ['DÉCOUVRIR LA RICHESSE CULTURELLE', "Les villes espagnoles regorgent de musées et de monuments historiques. Explorez des trésors comme le musée du Prado à Madrid, la cathédrale de Saint-Jacques-de-Compostelle, l'Alhambra de Grenade ou les œuvres de Gaudí à Barcelone."],
+  ['APPRÉCIER UN FOLKLORE TOUJOURS VIVACE', "Profitez de votre passage au Pays Basque pour regarder une partie de pelote basque, sport emblématique de la région."],
+  ['PRATIQUER DES ACTIVITÉS EN PLEIN AIR', "Les montagnes, rivières et plages espagnoles sont idéales pour la randonnée, le surf ou le canoë-kayak, notamment au nord, comme à San Sebastián ou dans les Pyrénées."],
+  ['APPRÉCIER LA GASTRONOMIE TRADITIONNELLE', "Des pintxos du Pays Basque aux paellas de Valence, chaque région propose ses spécialités, accompagnées de vins raffinés comme le Rioja ou le Cava."],
+  ['ADMIRER DES PAYSAGES SPECTACULAIRES', "Des Pyrénées aux plages dorées de la Costa Verde, les paysages espagnols sont d’une grande diversité, avec des parcs nationaux comme les Picos de Europa."],
+  ['VISITER DES MONASTÈRES UNIQUES', "La Navarre et la Rioja abritent de nombreux monastères romans, comme celui de Suso à San Millán, construit en l’an 550."],
+  ['FAIRE LA FÊTE PENDANT LA SEMANA GRANDE', "Chaque août, la Semana Grande de Bilbao et San Sebastián propose concerts en plein air, défilés, corridas, jeux traditionnels et feux d’artifice."],
+  ['DÉCOUVRIR LES ŒUVRES DES GRANDS ARTISTES ESPAGNOLS', "Admirez les œuvres de Dali à Figueres ou Cadaquès, ou les créations de Gaudí à Barcelone et à Comillas."],
+  ['UN ACCUEIL CHALEUREUX', "Les Espagnols sont réputés pour leur hospitalité : vivez des échanges authentiques dans les bars à tapas ou les marchés locaux."]
+] %}
+
+{% for i, raison in raisons %}
+  <h3>{{ loop.index }} : {{ raison[0] }}</h3>
+  <h5>{{ raison[1] }}</h5>
+{% endfor %}
+
+<div align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ugHDW2Talgw?si=j0VkJtyo1VQvJurI"
+    title="YouTube video player" frameborder="1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+</div>
+
+<div style="text-align: center;">
+  <input class="bouton" type="button" value="Réserver" />
+</div>
+{% endblock %}

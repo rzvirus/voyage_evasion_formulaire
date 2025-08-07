@@ -1,0 +1,36 @@
+{% set page_asset = 'pays/afrique' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Afrique - Univers du Voyage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/afrique.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="bvn">
+    <h1>Bienvenue en Afrique !</h1>
+    <h1>Partez à la découverte des merveilles de l'Afrique, un continent riche en cultures et en paysages époustouflants.</h1>
+    <h1>Laissez-vous séduire par l'aventure, la faune sauvage et les trésors historiques uniques de l'Afrique.</h1>
+</div>
+
+<div class="sa">
+    <h2>Partez à la découverte de l'Afrique du Sud</h2>
+    <p>Découvrez la richesse culturelle, les paysages époustouflants et la faune sauvage unique de l'Afrique du Sud. Une aventure inoubliable vous attend !</p>
+    <button onclick="window.location.href='{{ path("afriquedusud") }}';" class="btnsa">Découvrir l'Afrique du Sud</button>
+</div>
+
+<div class="egt">
+    <h2>Partez à l'assaut des pyramides en Égypte !</h2>
+    <p>Plongez dans l'histoire fascinante de l'Égypte, terre des pharaons et des pyramides majestueuses. Explorez les temples anciens, naviguez sur le Nil et laissez-vous émerveiller par les trésors millénaires de cette destination unique.</p>
+    <button onclick="window.location.href='{{ path("egypte") }}';" class="btnegt">Découvrir l'Égypte</button>
+</div>
+
+<div class="mrc">
+    <h3>Déambulez dans les rues animées du Maroc</h3>
+    <p>Plongez dans l'ambiance envoûtante du Maroc, entre souks colorés, palais somptueux et paysages variés. Découvrez les dunes dorées du désert, les montagnes majestueuses de l'Atlas et la richesse culinaire de ce pays fascinant.</p>
+    <button onclick="window.location.href='{{ path("maroc") }}';" class="btnmrc">Découvrir le Maroc</button>  
+</div>
+{% endblock %}

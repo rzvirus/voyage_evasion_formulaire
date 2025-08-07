@@ -1,0 +1,84 @@
+{% set page_asset = 'pays/maldives' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Maldives - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/maldives.css') }}">
+    <link rel="icon" href="{{ asset('images/faviconmaldives.png') }}">
+{% endblock %}
+
+{% block body %}
+<nav class="retour">
+  <a href="{{ path('destinations') }}">Destinations</a><p>></p>
+  <a href="{{ path('iles') }}">Îles</a><p>></p><p>Maldives</p>
+</nav>
+
+<main class="mainindex">
+
+  <div class="presentation">
+    <h1>Maruhabaa aa Maldives.</h1>
+    <img src="{{ asset('images/maldivesdrapeau.jpg') }}" class="imageamerique" alt="Drapeau Maldives">
+  </div>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/plagemaldive.jpg') }}" class="imagearticle" alt="Paysages">
+    <div class="divarticle">
+      <h2>Des paysages paradisiaques :</h2>
+      <p class="textarticle">
+        Plages de sable blanc immaculé, lagons turquoise, récifs coralliens incroyables… <br>
+        Aux Maldives, chaque île est une carte postale vivante. C’est l’endroit idéal pour se couper totalement du monde et se reconnecter à la nature.
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville1"><h3 class="nomville">Plage de sable immaculé</h3></div>
+    <div class="ville2"><h3 class="nomville">Lagons turquoise</h3></div>
+    <div class="ville3"><h3 class="nomville">Plage fluorescente</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <div class="divarticle">
+      <h2>Un lieu parfait pour la détente :</h2>
+      <p class="textarticle">
+        Resorts sur pilotis, spas de rêve, dîners sur la plage… <br>
+        Aux Maldives, tout est pensé pour le repos total, le romantisme et le bien-être. C'est l'une des meilleures destinations au monde pour une lune de miel ou un séjour ultra relaxant.
+      </p>
+    </div>
+    <img src="{{ asset('images/detentemaldives.jpg') }}" class="imagearticle right" alt="Détente">
+  </article>
+
+  <section class="villes">
+    <div class="ville4"><h3 class="nomville">Soneva Jani</h3></div>
+    <div class="ville5"><h3 class="nomville">Gili Lankanfushi</h3></div>
+    <div class="ville6"><h3 class="nomville">Cocoa Island</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/fondsmaldives.jpg') }}" class="imagearticle" alt="Sous l'océan">
+    <div class="divarticle">
+      <h2>Un paradis pour les amateurs de plongée :</h2>
+      <p class="textarticle">
+        Les Maldives abritent certains des plus beaux fonds marins du monde : poissons multicolores, raies manta, tortues, requins-baleines… <br>
+        Que tu sois débutant ou plongeur expérimenté, c’est un rêve aquatique accessible directement depuis la plage.
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville7"><h3 class="nomville">Banana Reef</h3></div>
+    <div class="ville8"><h3 class="nomville">Maaya Thila</h3></div>
+    <div class="ville9"><h3 class="nomville">Fotteyo Kandu</h3></div>
+  </section>
+
+</main>
+{% endblock %}

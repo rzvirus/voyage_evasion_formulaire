@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes translate{
+  from{transform: translateX(-10vw)}
+  to{transform: translateX(100vw)}
+}
+.avion{
+  animation-name: translate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+
+body  {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    height: 100%;
+  }
+  
+  header {
+    width: 100%;
+    background: #2a1e99;
+    height: 60px;
+  }
+  
+  .menu ul li ul {
+    background: #d10a12;
+  }
+
+  .menu ul li{
+    color: #d10a12
+  }
+
+  .bvn {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url("../images/asie.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    text-shadow: #000 0px 0px 10px;
+  }
+  
+  p{
+    margin-right: 80%;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+  }
+  
+  h1, h2, h3 {
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+  }
+  
+  .jp {
+    background-image: url("../images/jp.webp");
+    height: 500px;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btnjp{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  .tha{
+    background-image: url("../images/thai.jpg");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btntha{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  .viet{
+    background-image: url("../images/vietnam-in-november.webp");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btnviet{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  button {
+    background-color: #003399;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color: white;
+    transition: background-color 0.3s ease;
+  }

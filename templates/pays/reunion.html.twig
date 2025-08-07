@@ -1,0 +1,52 @@
+{% set page_asset = 'pays/reunion' %}
+{% extends 'base.html.twig' %}
+{% block title %}Réunion - Univers du Voyage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/reunion.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <section class="hero">
+    <h1>Découvrez la Réunion</h1>
+    <p>Explorez les merveilles de la culture réunionnaise, de la cuisine délicieuse et des paysages à couper le souffle.</p>
+    <p>Et son magnifique hymne national</p>
+    <audio src="{{ asset('images/Hymne_reunionnais.mp3') }}" controls></audio>
+  </section>
+
+  <section>
+    <h2>À propos de la Réunion</h2>
+    <p>
+      La Réunion est une île volcanique située dans l'Ouest de l'océan Indien, à l'est de l'Afrique, dans l'hémisphère sud. <br>
+      Elle constitue à la fois un département et une région d'outre-mer français (DROM). <br>
+      D'une superficie de 2 512 km², elle est située dans l'archipel des Mascareignes à 172 km à l'ouest-sud-ouest de l'île Maurice et à 679 km à l'est-sud-est de Madagascar. <br>
+      Le point culminant est le piton des Neiges (3 070 m), tandis que le piton de la Fournaise (2 632 m), au sud-est, est l’un des volcans les plus actifs du monde. <br>
+      L'île bénéficie d’un climat tropical et d’un écosystème unique.
+    </p>
+    <p>Que vous soyez passionné d’histoire, amateur de cuisine ou amoureux de la nature, la Réunion a quelque chose à offrir à chacun.</p>
+  </section>
+
+  <section class="destinations">
+    <h2>Destinations à la Réunion</h2>
+    <ul>
+      <li class="dest1"><a href="https://www.ville-saintemarie.re" target="_blank">Sainte-Marie</a></li>
+      <li class="dest1"><a href="https://trois-bassins.re" target="_blank">Trois-Bassins</a></li>
+      <li class="dest1"><a href="https://www.ouest-lareunion.com/saint-paul" target="_blank">Saint-Paul</a></li>
+      <li class="dest1"><a href="https://www.ouest-lareunion.com/saint-gilles" target="_blank">Saint-Gilles les Bains</a></li>
+      <li class="dest1"><a href="https://nominis.cef.fr/contenus/saint/1086/Saint-Philippe.html" target="_blank">Saint-Philippe</a></li>
+    </ul>
+  </section>
+
+  <section class="Photo">
+    <h2>Galerie Photo</h2>
+    <div class="gallery">
+      <img src="{{ asset('images/Reunion_1.jpg') }}" alt="Image 1" height="175" width="300">
+      <img src="{{ asset('images/Reunion_2.jpg') }}" alt="Image 2" height="175" width="300">
+      <img src="{{ asset('images/Reunion_3.jpg') }}" alt="Image 3" height="175" width="300">
+      <img src="{{ asset('images/Reunion_4.jpg') }}" alt="Image 4" height="175" width="300">
+    </div>
+  </section>
+</main>
+{% endblock %}

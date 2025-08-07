@@ -1,0 +1,100 @@
+{% set page_asset = 'pays/tahiti' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Tahiti - Univers du Voyage{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/tahiti.css') }}">
+  <link rel="shortcut icon" href="{{ asset('images/drapeau_tahiti.jpg') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <div class="tete">
+    <h1>Tahiti</h1>
+    <div class="joke">
+      <audio src="{{ asset('images/Keen V - Tahiti.mp3') }}" controls></audio>
+      <span class="blague">Désolé mais c'était maintenant ou jamais</span>
+    </div>
+  </div>
+
+  <p class="presentation">
+    "Tahiti est une île de la Polynésie française (collectivité d'outre-mer) située dans le Sud de l'océan Pacifique. Elle fait partie du groupe des îles du Vent et de l'archipel de la Société. Cette île haute et montagneuse, d'origine volcanique, est entourée d'un récif de corail. L'île est composée de deux parties — Tahiti nui, la plus importante, et Tahiti iti également appelée la Presqu'île, reliées entre elles par l'isthme de Taravao."
+    <br>
+    <a href="https://fr.wikipedia.org/wiki/Tahiti">Source : Wikipédia</a>
+  </p>
+
+  <h2>Alors vous partez ?</h2>
+  <div class="grid-container">
+    <div class="hotel">
+      <h3>Pour dormir :</h3>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/hotel_1.jpg') }}" alt="Hôtel en ville" /></a>
+      <figcaption>Hôtel dans la ville</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/hotel_2.jpg') }}" alt="Hôtel à la plage" /></a>
+      <figcaption>Hôtel à la plage</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/hotel_3.jpg') }}" alt="Hôtel en montagne" /></a>
+      <figcaption>Hôtel dans la montagne</figcaption>
+    </div>
+
+    <div class="restaurant">
+      <h3>Pour manger :</h3>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/restaurant_1.jpg') }}" alt="Restaurant gastronomique" /></a>
+      <figcaption>Restaurant gastronomique</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/restaurant_2.jpg') }}" alt="Restaurant de mer" /></a>
+      <figcaption>Restaurant de mer</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/restaurant_3.jpg') }}" alt="Comme à la maison" /></a>
+      <figcaption>Restauration comme à la maison</figcaption>
+    </div>
+
+    <div class="activite">
+      <h3>À faire :</h3>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/activite_1.jpg') }}" alt="VTT" /></a>
+      <figcaption>Vélo tout terrain</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/activite_2.jpg') }}" alt="Surf" /></a>
+      <figcaption>Surf</figcaption>
+      <a href="https://www.google.fr/"><img src="{{ asset('images/activite_3.jpg') }}" alt="Parapente" /></a>
+      <figcaption>Parapente</figcaption>
+    </div>
+  </div>
+
+  <h2>Départ</h2>
+  <div class="compagnie">
+    <a href="https://wwws.airfrance.pf/"><img src="{{ asset('images/airfrance.jpg') }}" alt="Air France" /></a>
+    <a href="https://www.aircaraibes.com/fr-car"><img src="{{ asset('images/aircaraibe.jpg') }}" alt="Air Caraïbe" /></a>
+    <a href="https://fr.airtahitinui.com/"><img src="{{ asset('images/airthaitinuit.jpg') }}" alt="Air Tahiti Nui" /></a>
+  </div>
+
+  <h2>Formalités d'entrée</h2>
+  <div class="formalite">
+    <div class="clarete">
+      <h3>Pièces d’identité</h3>
+      <p>Aucun visa nécessaire pour un Français. Il suffit d’avoir une carte nationale d’identité (CNI) valide ou un passeport valide.</p>
+    </div>
+    <div class="clarete">
+      <h3>Billet d’avion</h3>
+      <p>Tu dois avoir un billet aller-retour ou de continuation (un billet de sortie du territoire).</p>
+    </div>
+    <div class="clarete">
+      <h3>Santé</h3>
+      <p>Aucun vaccin obligatoire pour Tahiti. Mais il est recommandé d’être à jour dans tes vaccins classiques. En période de dengue ou Zika, protège-toi contre les moustiques.</p>
+    </div>
+    <div class="clarete">
+      <h3>Douanes</h3>
+      <p>Tu peux apporter tes effets personnels. Certaines marchandises sont limitées ou interdites (plantes, animaux, produits frais). Plus de 10 000 € → déclaration douane obligatoire.</p>
+    </div>
+    <div class="clarete">
+      <h3>Autres</h3>
+      <p>La monnaie locale est le franc pacifique (XPF), pas l’euro. 1 € ≈ 119 XPF. Bonne couverture téléphonique et internet sur les grandes îles.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>
+    Page largement inspirée de
+    <a href="https://www.exotismes.fr/" target="_blank">Exotismes</a>
+  </p>
+</footer>
+{% endblock %}

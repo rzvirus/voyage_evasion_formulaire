@@ -1,0 +1,79 @@
+@keyframes translate{
+  from{transform: translateX(-10vw)}
+  to{transform: translateX(100vw)}
+}
+.avion{
+  animation-name: translate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+
+
+nav{
+  background-color: red;
+  color: white;
+}
+main{
+    background: rgba(7, 7, 255, 0.438);
+}
+.tete{
+ margin-bottom: 5%;
+}
+h2{
+    color: rgb(179, 80, 96);
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: center;
+}
+.container-flex{
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    align-items: center;
+}
+.container-grid{
+    display: flex;
+    flex-direction: row;
+    gap : 5%;
+    place-items: center;
+}
+  
+  .tahiti {
+    grid-area: tahiti;
+    text-align: center;
+  }
+  
+  .maldive {
+    grid-area: maldive;
+    text-align: center;
+  }
+  
+  .reunion {
+    grid-area: reunion;
+    text-align: center;
+  }
+  
+  .none {
+    grid-area: none;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 300px; /* Ajuste la taille des images */
+    height: auto;
+  }
+
+  .auguemente:hover {
+    scale: 1.5;
+  }
+
+.paragraphe{
+    margin: 5%;
+    display: grid;
+    place-items: center;
+    gap: 10%;
+}
+  

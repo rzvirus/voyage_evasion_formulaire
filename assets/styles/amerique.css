@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes translate{
+    from{transform: translateX(-10vw)}
+    to{transform: translateX(100vw)}
+}
+.avion{
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+
+body {
+    background-color: #ecececc9;
+    padding-bottom: 50px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background:  black   
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-top: 25px;
+    justify-content: center;
+
+}
+
+.retour a, .retour p {
+    display: inline-block;
+    color: black;
+    align-items: center;
+    padding: 0 5px;
+    font-style: italic;
+}
+
+.retour a {
+    text-decoration: underline;
+}
+
+.imageamerique {
+    width: 500px;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+}
+
+.presentation {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.presentation h1 {
+    font-size: 28px;
+    font-style: italic;
+}
+
+article img {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+}
+
+article {
+    display: flex;
+    width: 80%;
+    margin: 60px auto 100px auto;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+article h2 {
+    font-size: 35px;
+    line-height: 2;
+    padding-bottom: 50px;
+    color: black;
+}
+
+article ul {
+    font-size: 18px;
+    margin-left: 5vh;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+hr {
+    display: flex;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divarticle {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,83 @@
+{% set page_asset = 'pays/usa' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}États-Unis - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/usa.css') }}">
+  <link rel="icon" href="{{ asset('images/faviconusa.png') }}">
+{% endblock %}
+
+{% block body %}
+<nav class="retour">
+  <a href="{{ path('destinations') }}">Destinations</a><p>></p>
+  <a href="{{ path('amerique') }}">Amérique</a><p>></p>
+  <p>États-Unis</p>
+</nav>
+
+<main class="mainindex">
+
+  <div class="presentation">
+    <h1>Welcome to the United States of America!</h1>
+    <img src="{{ asset('images/drapeauusa.jpg') }}" class="imageamerique" alt="Drapeau USA">
+  </div>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/paysageusa.png') }}" class="imagearticle" alt="USA">
+    <div class="divarticle">
+      <h2>Une diversité incroyable de paysages :</h2>
+      <p class="textarticle">
+        Du Grand Canyon aux plages de Floride, des montagnes Rocheuses aux gratte-ciel de New York, en passant par les forêts de séquoias en Californie — les USA, c'est comme voyager sur plusieurs continents en un seul pays.
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville1"><h3 class="nomville">Le Grand Canyon</h3></div>
+    <div class="ville2"><h3 class="nomville">Côte Big Sur</h3></div>
+    <div class="ville3"><h3 class="nomville">Monument Valley</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <div class="divarticle">
+      <h2>Des expériences culturelles uniques :</h2>
+      <p class="textarticle">
+        Musique (jazz à La Nouvelle-Orléans, country à Nashville), sports (NBA, NFL), cinéma (Hollywood), parcs d'attractions mythiques (Disney, Universal Studios)… <br>
+        C'est le pays du divertissement et de la culture pop.
+      </p>
+    </div>
+    <img src="{{ asset('images/losangeles.jpg') }}" class="imagearticle right" alt="Los Angeles">
+  </article>
+
+  <section class="villes">
+    <div class="ville4"><h3 class="nomville">Los Angeles</h3></div>
+    <div class="ville5"><h3 class="nomville">New York</h3></div>
+    <div class="ville6"><h3 class="nomville">Miami</h3></div>
+  </section>
+
+  <hr>
+
+  <article class="article">
+    <img src="{{ asset('images/route66.png') }}" class="imagearticle right" alt="Route 66">
+    <div class="divarticle">
+      <h2>Un mode de vie et une hospitalité différente :</h2>
+      <p class="textarticle">
+        Découvrir les grandes routes mythiques (comme la Route 66), les diners typiques, les parcs nationaux sauvages, mais aussi l'accueil chaleureux dans de nombreux États, ça te plonge dans l'American Dream… avec des pancakes au petit-déj' !
+      </p>
+    </div>
+  </article>
+
+  <section class="villes">
+    <div class="ville7"><h3 class="nomville">Parc Yellowstone</h3></div>
+    <div class="ville8"><h3 class="nomville">Mont Rushmore</h3></div>
+    <div class="ville9"><h3 class="nomville">Route 66</h3></div>
+  </section>
+
+</main>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% set page_asset = 'pays/destination' %}
+{% extends 'base.html.twig' %}
+{% block title %}Destinations - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/destination.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <h2>
+    Voici les merveilleuses destinations proposées par nos formidables agents de voyage :
+  </h2>
+
+  <div class="grid-container">
+    <div class="europe">
+      <h3><a href="#">Europe</a></h3>
+      <ul class="grid_country">
+        <li><a href="#">France</a></li>
+        <li><a href="#">Espagne</a></li>
+        <li><a href="#">Italie</a></li>
+      </ul>
+    </div>
+
+    <div class="asie">
+      <h3><a href="#">Asie</a></h3>
+      <ul class="grid_country">
+        <li><a href="#">Japon</a></li>
+        <li><a href="#">Thaïlande</a></li>
+        <li><a href="#">Vietnam</a></li>
+      </ul>
+    </div>
+
+    <div class="amerique">
+      <h3><a href="#">Amériques</a></h3>
+      <ul class="grid_country">
+        <li><a href="#">États-Unis</a></li>
+        <li><a href="#">Brésil</a></li>
+        <li><a href="#">Argentine</a></li>
+      </ul>
+    </div>
+
+    <div class="afrique">
+      <h3><a href="#">Afrique</a></h3>
+      <ul class="grid_country">
+        <li><a href="#">Maroc</a></li>
+        <li><a href="#">Afrique du Sud</a></li>
+        <li><a href="#">Égypte</a></li>
+      </ul>
+    </div>
+
+    <div class="iles">
+      <h3><a href="#">Îles</a></h3>
+      <ul class="grid_country">
+        <li><a href="#">Tahiti</a></li>
+        <li><a href="#">Maldives</a></li>
+        <li><a href="#">Réunion</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="centrer">
+    Bien sûr, nos agents sont capables d’adapter vos voyages pour qu’ils vous ressemblent.
+  </p>
+</main>
+
+<footer>
+  <p class="centrer">
+    Merci de prendre <a href="{{ path('contact') }}">contact</a> avec eux
+  </p>
+</footer>
+{% endblock %}

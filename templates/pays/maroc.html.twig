@@ -1,0 +1,42 @@
+{% set page_asset = 'pays/maroc' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Maroc - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/maroc.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<nav class="retour">
+    <a href="{{ path('destinations') }}">Destinations</a>
+    <p>></p><a href="{{ path('afrique') }}">Afrique</a>
+    <p>></p><p>Maroc</p>
+</nav>
+
+<main class="mainindex">
+    <h1>Destination : Maroc</h1>
+
+    <section>
+        <h2>🌄 Des paysages à couper le souffle</h2>
+        <p>Du désert du Sahara aux montagnes de l’Atlas, en passant par les plages de l’Atlantique, le Maroc offre une diversité naturelle impressionnante.</p>
+    </section>
+
+    <section>
+        <h2>🏛 Un patrimoine culturel riche</h2>
+        <p>Découvrez les médinas animées de Fès et Marrakech, les palais, les souks parfumés et les traditions artisanales transmises depuis des siècles.</p>
+    </section>
+
+    <section>
+        <h2>🍵 Une gastronomie savoureuse</h2>
+        <p>Couscous, tajines, pâtisseries au miel et thé à la menthe : un festival de saveurs vous attend à chaque coin de rue.</p>
+    </section>
+
+    <footer>
+        <p>Préparez vos valises… Le Maroc vous ouvre ses portes !</p>
+    </footer>
+</main>
+{% endblock %}

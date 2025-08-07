@@ -1,0 +1,82 @@
+{% set page_asset = 'pays/bresil' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Brésil - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/bresil.css') }}">
+  <link rel="icon" href="{{ asset('images/faviconbrazil.png') }}">
+{% endblock %}
+
+{% block body %}
+  <nav class="retour">
+    <a href="{{ path('destinations') }}">Destinations</a><p>></p><a href="{{ path('amerique') }}">Amérique</a><p>></p><p>Brésil</p>
+  </nav>
+
+  <main class="mainindex">
+    <div class="presentation">
+      <h1>Bem-vindo ao Brasil!</h1>
+      <img src="{{ asset('images/drapeaubresil2.png') }}" class="imageamerique" alt="Drapeau Brésil">
+    </div>
+
+    <hr>
+
+    <article class="article">
+      <img src="{{ asset('images/rio.jpg') }}" class="imagearticle" alt="Rio">
+      <div class="divarticle">
+        <h2>Des paysages grandioses :</h2>
+        <p class="textarticle">
+          Explorez la magie du Brésil, entre la majesté de la forêt amazonienne, les plages de rêve du Nordeste et les spectaculaires chutes d'Iguaçu. <br>
+          Plongez au cœur du Pantanal, l'un des plus grands sanctuaires d'animaux sauvages au monde. <br>
+          Le Brésil vous promet une aventure inoubliable au cœur d'une nature grandiose et éclatante.
+        </p>
+      </div>
+    </article>
+
+    <section class="villes">
+      <div class="ville1"><h3 class="nomville">Forêt amazonienne</h3></div>
+      <div class="ville2"><h3 class="nomville">Fernando Noronha</h3></div>
+      <div class="ville3"><h3 class="nomville">Les chutes d'Iguazu</h3></div>
+    </section>
+
+    <hr>
+
+    <article class="article">
+      <div class="divarticle">
+        <h2>Participer au plus grand carnaval de la planète :</h2>
+        <p class="textarticle">
+          Le Carnaval de Rio est un événement à vivre au moins une fois dans sa vie : des défilés spectaculaires, des costumes extravagants, de la samba à n'en plus finir et une atmosphère d'énergie pure et de liberté totale dans toute la ville (et même dans tout le pays !).
+        </p>
+      </div>
+      <img src="{{ asset('images/carnaval.png') }}" class="imagearticle right" alt="Carnaval">
+    </article>
+
+    <section class="villes">
+      <div class="ville4"><h3 class="nomville">Rio de Janeiro</h3></div>
+      <div class="ville5"><h3 class="nomville">Salvador de Bahia</h3></div>
+      <div class="ville6"><h3 class="nomville">Olinda</h3></div>
+    </section>
+
+    <hr>
+
+    <article class="article">
+      <img src="{{ asset('images/footbrasil.png') }}" class="imagearticle" alt="Foot Brésil">
+      <div class="divarticle">
+        <h2>Vivre la passion du football à l'état pur :</h2>
+        <p class="textarticle">
+          Au Brésil, le football est une véritable passion qui fait vibrer tout un peuple. <br>
+          Des plages de Rio aux stades mythiques comme le Maracanã, chaque match est une fête. <br>
+          Vivez l'émotion brute du plus beau jeu au cœur du pays du football !
+        </p>
+      </div>
+    </article>
+
+    <section class="villes">
+      <div class="ville7"><h3 class="nomville">Maracanã - Rio de Janeiro</h3></div>
+      <div class="ville8"><h3 class="nomville">Sao Paulo</h3></div>
+      <div class="ville9"><h3 class="nomville">Belo Horizonte</h3></div>
+    </section>
+  </main>
+{% endblock %}

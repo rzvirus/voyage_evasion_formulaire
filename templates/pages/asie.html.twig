@@ -1,0 +1,46 @@
+{% set page_asset = 'pays/asie' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Asie - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/asie.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="bvn">
+  <h1>Bienvenue en Asie !</h1>
+  <h1>Partez à la découverte des merveilles de l'Asie, un continent aux mille contrastes et richesses culturelles.</h1>
+  <h1>Laissez-vous envoûter par ses paysages époustouflants, ses traditions ancestrales et sa gastronomie unique.</h1>
+</div>
+
+<div class="jp">
+  <h2>Le Japon n'attend que vous !</h2>
+  <p>
+    Plongez dans l'univers fascinant du Japon, où traditions ancestrales et modernité se rencontrent.
+    Découvrez des temples majestueux, des paysages enchanteurs et une culture unique qui ne manquera pas de vous émerveiller.
+  </p>
+  <a href="#" class="btnjp">Découvrir le Japon</a>
+</div>
+
+<div class="tha">
+  <h2>Les mystères de la Thaïlande</h2>
+  <p>
+    Découvrez la Thaïlande, un pays aux mille sourires et aux paysages paradisiaques.
+    Entre plages de sable fin, temples scintillants et marchés animés, laissez-vous séduire par la richesse culturelle
+    et la beauté naturelle de cette destination enchanteresse.
+  </p>
+  <a href="#" class="btntha">Découvrir la Thaïlande</a>
+</div>
+
+<div class="viet">
+  <h3>Le Vietnam et son patrimoine</h3>
+  <p>
+    Explorez le Vietnam, un pays aux mille facettes où traditions ancestrales et paysages à couper le souffle se mêlent harmonieusement.
+    Des rizières en terrasses aux marchés flottants, laissez-vous charmer par l'authenticité et la beauté de cette destination unique.
+  </p>
+  <a href="#" class="btnviet">Découvrir le Vietnam</a>
+</div>
+{% endblock %}

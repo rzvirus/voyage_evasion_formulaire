@@ -1,0 +1,49 @@
+{% set page_asset = 'pays/inscription' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/connexion.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="formulaire">
+    <h1>Bienvenue sur la page d'inscription</h1>
+    <form>
+      <div class="gender-selection">
+        <label>
+          <input type="radio" name="gender" value="Homme" required /> Homme
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Femme" /> Femme
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Non-binaire" />
+          Non-binaire
+        </label>
+      </div>
+      <input type="text" placeholder="Nom" required />
+      <input type="text" placeholder="Prénom" required />
+      <input type="email" placeholder="Email" required />
+      <input type="email" placeholder="Confirmer l'Email" required />
+      <input type="password" placeholder="Mot de passe" required />
+      <input type="password" placeholder="Confirmer le mot de passe" required />
+      <input type="number" placeholder="Numéro de téléphone" required />
+      <input type="submit" value="Inscription" />
+    </form>
+    <div class="links">
+      <a href="{{ path('login') }}">
+        <p style="text-align: center">Vous avez déjà un compte ?</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="image-connexion">
+    <img src="{{ asset('images/image_inscription.jpeg') }}" alt="Image Connexion">
+  </div>
+  <div class="overlay"></div>
+</div>
+{% endblock %}

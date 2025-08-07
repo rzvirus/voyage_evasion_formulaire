@@ -1,0 +1,74 @@
+{% set page_asset = 'pays/amerique' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Amérique - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/amerique.css') }}">
+    <link rel="icon" href="{{ asset('images/faviconavion.png') }}">
+{% endblock %}
+
+{% block body %}
+<main class="mainindex">
+    <nav class="retour">
+        <a href="{{ path('destinations') }}">Destinations</a>
+        <p>></p>
+        <p>Amérique</p>
+    </nav>
+
+    <div class="presentation">
+        <h1>Bienvenue en Amérique!</h1>
+        <img src="{{ asset('images/america.jpg') }}" class="imageamerique" alt="Carte Amérique">
+    </div>
+
+    <hr>
+
+    <article class="article usa">
+        <a href="#">
+            <img src="{{ asset('images/USA.png') }}" class="imagearticle" alt="USA">
+        </a>
+        <div class="divarticle">
+            <a href="#"><h2>États-Unis</h2></a>
+            <ul>
+                <li>Une diversité incroyable de paysages!</li>
+                <li>Des expériences culturelles uniques!</li>
+                <li>Un mode de vie et une hospitalité différente!</li>
+            </ul>
+        </div>
+    </article>
+
+    <hr>
+
+    <article class="article bresil">
+        <a href="#">
+            <img src="{{ asset('images/bresil.jpg') }}" class="imagearticle" alt="Brésil">
+        </a>
+        <div class="divarticle">
+            <a href="#"><h2>Brésil</h2></a>
+            <ul>
+                <li>Des paysages grandioses et très variés!</li>
+                <li>Participer au plus grand carnaval de la planète!</li>
+                <li>Vivre la passion du football à l’état pur!</li>
+            </ul>
+        </div>
+    </article>
+
+    <hr>
+
+    <article class="article argentine">
+        <a href="#">
+            <img src="{{ asset('images/argentinev.png') }}" class="imagearticle" alt="Argentine">
+        </a>
+        <div class="divarticle">
+            <a href="#"><h2>Argentine</h2></a>
+            <ul>
+                <li>Des paysages à couper le souffle!</li>
+                <li>Une culture vibrante et passionnée!</li>
+                <li>Des régions encore préservées du tourisme de masse!</li>
+            </ul>
+        </div>
+    </article>
+</main>
+{% endblock %}

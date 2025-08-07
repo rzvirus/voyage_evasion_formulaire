@@ -1,0 +1,48 @@
+{% set page_asset = 'pays/thailande' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Thaïlande - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/thailand.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <section class="hero">
+    <h1>Découvrez la Thaïlande</h1>
+    <p>Explorez les merveilles de la culture thaïlandaise, de la cuisine délicieuse et des paysages à couper le souffle.</p>
+    <p>Et son magnifique hymne national :</p>
+    <audio src="{{ asset('audio/Hymne_reunionnais.mp3') }}" controls></audio>
+  </section>
+
+  <section>
+    <h2>À propos de la Thaïlande</h2>
+    <p>La Thaïlande, pays d’Asie du Sud-Est, est réputée pour ses plages tropicales, ses palais royaux richement décorés, ses ruines anciennes et ses temples bouddhistes ornés. Sa capitale, Bangkok, est une métropole animée mêlant tradition et modernité.</p>
+    <p>Que vous soyez passionné d'histoire, amateur de cuisine ou amoureux de la nature, la Thaïlande a quelque chose à offrir à chacun.</p>
+  </section>
+
+  <section class="destinations">
+    <h2>Destinations en Thaïlande</h2>
+    <ul>
+      <li class="dest1"><a href="https://www.bangkok.fr">Bangkok</a></li>
+      <li class="dest1"><a href="https://www.tourismethai.fr/centre/ayutthaya/">Ayutthaya</a></li>
+      <li class="dest1"><a href="https://vietnamdecouverte.com/kanchanaburi-thailande">Kanchanaburi</a></li>
+      <li class="dest1"><a href="https://www.voyagethailande.fr/que-faire-voir-krabi">Krabi</a></li>
+      <li class="dest1"><a href="https://vietnamdecouverte.com/chiang-rai-thailande">Chiang Rai</a></li>
+    </ul>
+  </section>
+
+  <section class="Photo">
+    <h2>Galerie Photo</h2>
+    <div class="gallery">
+      <img src="{{ asset('images/Thailand_1.jpg') }}" alt="Image 1" height="175px" width="300px">
+      <img src="{{ asset('images/Thailand_2.jpg') }}" alt="Image 2" height="175px" width="300px">
+      <img src="{{ asset('images/Thailand_3.jpg') }}" alt="Image 3" height="175px" width="300px">
+      <img src="{{ asset('images/Thailand_4.jpg') }}" alt="Image 4" height="175px" width="300px">
+    </div>
+  </section>
+</main>
+{% endblock %}

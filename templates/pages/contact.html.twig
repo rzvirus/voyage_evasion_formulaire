@@ -1,0 +1,42 @@
+{% set page_asset = 'pays/contact' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+<main class="contact">
+  <h1>Contactez-nous</h1>
+  <form action="#" method="post">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <div class="contact-info">
+    <h2>Informations de contact</h2>
+    <p>Email : voyage-evasion@gmail.com</p>
+    <p>Téléphone : +00 00 00 00 00 (17.99€ la min + prix d'un appel local)</p>
+    <p>Adresse : 12321351 Rue du Voyage, 75000 Paris, France</p>
+    <p>Horaires : Lundi - Mardi, 10h30 - 10h35</p>
+
+    <p>Suivez-nous sur les réseaux sociaux :</p>
+    <p>IKS : @Voyage-Evasion OFFI</p>
+    <p>FèceBouk : Voyage-Evasion</p>
+    <p>Amstramgram : Evasion-Voyage</p>
+    <p>LinkDeux : S'évader en voyageant</p>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% set page_asset = 'pays/alaune' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}À la une - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/alaune.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="a-la-une">
+  <h2>🌍 À la une ce mois-ci</h2>
+  <div class="destinations-grid">
+    <article class="destination-card france">
+      <h3>France</h3>
+      <p>Explorez les ruelles de Paris, les plages de la Côte d'Azur et les châteaux de la Loire.</p>
+      <a href="{{ path('france') }}">Découvrir</a>
+    </article>
+
+    <article class="destination-card italie">
+      <h3>Italie</h3>
+      <p>Rome, Venise, Florence... L'Italie vous ouvre ses bras pour un voyage historique et gastronomique.</p>
+      <a href="{{ path('italie') }}">Explorer</a>
+    </article>
+
+    <article class="destination-card bresil">
+      <h3>🇧🇷 Brésil</h3>
+      <p>Dansez au rythme de la samba à Rio et émerveillez-vous devant la forêt amazonienne.</p>
+      <a href="{{ path('bresil') }}">En savoir plus</a>
+    </article>
+
+    <article class="destination-card japon">
+      <h3>🇯🇵 Japon</h3>
+      <p>Tradition et modernité : vivez une aventure unique entre temples, sakura et métropoles futuristes.</p>
+      <a href="{{ path('japon') }}">Voyager</a>
+    </article>
+  </div>
+</section>
+
+<section class="evenements-recents">
+  <h2>📅 Événements récents</h2>
+  <div class="evenements-grid">
+    <article class="evenement">
+      <img src="{{ asset('images/event-paris.webp') }}" alt="Festival à Paris">
+      <div class="contenu">
+        <h3>Festival Lumières à Paris</h3>
+        <span class="date">Avril 2025</span>
+        <p>Un spectacle lumineux sur les quais de Seine avec musique, art et gastronomie.</p>
+      </div>
+    </article>
+
+    <article class="evenement">
+      <img src="{{ asset('images/event-rome.webp') }}" alt="Carnaval de Rome">
+      <div class="contenu">
+        <h3>Carnaval de Rome</h3>
+        <span class="date">Mars 2025</span>
+        <p>Des défilés de costumes historiques dans les rues de la capitale italienne.</p>
+      </div>
+    </article>
+
+    <article class="evenement">
+      <img src="{{ asset('images/event-rio.jpg') }}" alt="Carnaval de Rio">
+      <div class="contenu">
+        <h3>Carnaval de Rio</h3>
+        <span class="date">Février 2025</span>
+        <p>Le plus grand carnaval du monde entre danse, musique et costumes extravagants.</p>
+      </div>
+    </article>
+
+    <article class="evenement">
+      <img src="{{ asset('images/event-kyoto.jpg') }}" alt="Hanami à Kyoto">
+      <div class="contenu">
+        <h3>Hanami à Kyoto</h3>
+        <span class="date">Avril 2025</span>
+        <p>La saison des cerisiers en fleurs au Japon, célébrée avec des pique-niques sous les sakura.</p>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock %}

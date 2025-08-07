@@ -1,0 +1,33 @@
+{% set page_asset = 'pays/connexion' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/connexion.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="formulaire">
+    <h1>Bienvenue sur la page connexion</h1>
+    <form>
+      <input type="number" placeholder="Numéro de Dossier" required>
+      <input type="email" placeholder="Email renseigné pour la réservation" required>
+      <input type="password" placeholder="Mot de passe" required>
+      <input type="submit" value="Se connecter">
+    </form>
+    <div class="links">
+      <a href="#"><p>Vous n'avez pas de numéro de dossier ?</p></a>
+      <a href="#"><p>Vous avez oublié votre mot de passe ?</p></a>
+      <a href="{{ path('register') }}"><p style="text-align: center;">Pas de compte ?</p></a>
+    </div>
+  </div>
+
+  <div class="image-connexion">
+    <img src="{{ asset('images/image_connexion.jpg') }}" alt="Image Connexion">
+  </div>
+  <div class="overlay"></div>
+</div>
+{% endblock %}

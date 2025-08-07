@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes translate{
+    from{transform: translateX(-10vw)}
+    to{transform: translateX(100vw)}
+}
+.avion{
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+
+header {
+  width: 100%;
+  height: 60px;
+  background:  linear-gradient(
+        -30deg,         
+        #000000 0%,
+        #000000 28%,
+        #007A4D 28%,
+        #007A4D 72%,
+        #FFD100 72%,
+        #FFD100 100%
+
+  )
+}
+.menuli {
+  color: black;
+  font-weight: bold;
+}
+
+.retour {
+    margin-top: 15px;
+}
+
+.retour a, .retour p {
+    display: inline-block;
+    color: black;
+    align-items: center;
+    padding: 0 5px;
+    font-style: italic;
+}
+
+.retour a {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #007a4d9a;
+    padding-bottom: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imageamerique {
+    width: 500px;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+}
+
+.presentation {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.presentation h1 {
+    font-size: 28px;
+    font-style: italic;
+}
+
+article img {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+}
+
+article {
+    display: flex;
+    width: 80%;
+    margin: 60px auto 100px auto;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+article h2 {
+    font-size: 35px;
+    line-height: 2;
+    padding-bottom: 50px;
+    font-style: italic;
+    color: black;
+}
+
+article ul {
+    font-size: 18px;
+    margin-left: 5vh;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+hr {
+    display: flex;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divarticle {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.textarticle {
+    font-size: 18px;
+}
+
+.villes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+    width: 60%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.307);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    }
+
+.ville1 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/kruger.jpg);
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+      
+}
+
+.ville1:hover {
+    transform: scale(1.03);
+
+}
+
+.ville2 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/sandi.png);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+    
+}
+
+.ville2:hover {
+    transform: scale(1.03);
+
+}
+
+.ville3 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/madkwe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.ville3:hover {
+    transform: scale(1.03);
+
+}
+
+
+.nomville {
+    padding-top: 3%;
+    padding-left: 5%;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.descriptionville {
+    position: relative;
+    left:   55%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.ville4 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/table.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+      
+}
+
+.ville4:hover {
+    transform: scale(1.03);
+
+}
+
+.ville5 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/karoo.jpg);
+    
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+    
+}
+
+.ville5:hover {
+    transform: scale(1.03);
+
+}
+
+.ville6 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/stellenbosch.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.ville6:hover {
+    transform: scale(1.03);
+
+}
+
+.ville7 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/lecapencore.jpg);
+    
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+      
+}
+
+.ville7:hover {
+    transform: scale(1.03);
+
+}
+
+.ville8 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/johannesburg.jpg);
+    
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+    
+}
+
+.ville8:hover {
+    transform: scale(1.03);
+
+}
+
+.ville9 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/Durban.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.63);
+    justify-content: space-between;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.ville9:hover {
+    transform: scale(1.03);
+
+}

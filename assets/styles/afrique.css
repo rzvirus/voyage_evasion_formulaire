@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes translate{
+  from{transform: translateX(-10vw)}
+  to{transform: translateX(100vw)}
+}
+.avion{
+  animation-name: translate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+
+
+
+body  {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    height: 100%;
+  }
+  
+  header {
+    width: 100%;
+    background: #018a2c;
+    height: 60px;
+  }
+  
+  .menu ul li ul {
+    background: #d10a12;
+  }
+
+  .menu ul li{
+    color: #fcde02;
+  }
+
+  .bvn {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url("../images/AMP-197.png");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    text-shadow: #000 0px 0px 10px;
+  }
+  
+  p{
+    margin-right: 80%;
+    height: auto;
+    font-size: 23px;
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+  }
+  
+  h1, h2, h3 {
+    text-shadow: #000 0px 0px 10px;
+    padding: 10px;
+  }
+  
+  .sa {
+    background-image: url("../images/afriquedusud.jpg");
+    height: 500px;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btnsa{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  .egt{
+    background-image: url("../images/egt.jpg");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btnegt{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  .mrc{
+    background-image: url("../images/Marrakech.jpg");
+    height: 500PX;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .btnmrc{
+    position: absolute;
+    margin-top: auto;
+  }
+  
+  button {
+    background-color: #003399;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color: white;
+    transition: background-color 0.3s ease;
+  }

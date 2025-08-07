@@ -1,0 +1,54 @@
+{% set page_asset = 'pays/iles' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Îles - Univers du Voyage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/iles.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/drapeau_tahiti.jpg') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <div class="tete">
+    <h2>Vous préférez les îles ? Parfait !</h2>
+  </div>
+
+  <div class="container-flex">
+    <div class="container-grid">
+      <div class="tahiti">
+        <a href="{{ path('tahiti') }}">
+          <h3>Tahiti</h3>
+          <img class="auguemente" src="{{ asset('images/tahiti.jpg') }}" alt="Paysage de Tahiti" />
+        </a>
+      </div>
+      <div class="none"></div>
+      <div class="maldive">
+        <a href="{{ path('maldives') }}">
+          <h3>Maldives</h3>
+          <img class="auguemente" src="{{ asset('images/maldive.jpg') }}" alt="Paysage des Maldives" />
+        </a>
+      </div>
+      <div class="reunion">
+        <a href="{{ path('reunion') }}">
+          <h3>Réunion</h3>
+          <img class="auguemente" src="{{ asset('images/reunion.jpg') }}" alt="Paysage de la Réunion" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="paragraphe">
+    <p class="centrer">
+      Peu importe quelle île vous choisirez, l'expérience restera inoubliable.
+    </p>
+    <p class="centrer">
+      Bien sûr, nos agents de voyages sont disponibles pour que votre voyage vous ressemble.
+    </p>
+    <img src="{{ asset('images/iles.jpg') }}" alt="Illustration îles" />
+  </div>
+  <br />
+</main>
+{% endblock %}

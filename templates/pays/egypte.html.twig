@@ -1,0 +1,36 @@
+{% set page_asset = 'pays/egypte' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Égypte - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/egypte.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<nav class="retour">
+  <a href="{{ path('destinations') }}">Destinations</a>
+  <p>></p><a href="{{ path('afrique') }}">Afrique</a>
+  <p>></p><p>Égypte</p>
+</nav>
+
+<main class="mainindex">
+  <div class="presentation">
+    <h1>Destination : Égypte</h1>
+    <p>
+      Plongez au cœur de l'Égypte, terre mythique où les pyramides effleurent le ciel et où le Nil murmure des légendes millénaires.<br>
+      Admirez les trésors des pharaons, explorez des temples majestueux et perdez-vous dans les souks colorés du Caire.<br>
+      Sous un soleil éclatant, découvrez des paysages entre désert doré et oasis luxuriantes.<br>
+      Laissez-vous émerveiller par la magie intemporelle de Louxor, Abou Simbel et Alexandrie.<br>
+      L'Égypte vous promet un voyage unique, entre histoire fascinante et émotions inoubliables.
+    </p>
+
+    <h2>Voici quelques images :</h2>
+    <img src="{{ asset('images/temple_horus_egypte.jpg') }}" alt="Temple d'Horus">
+    <img src="{{ asset('images/egypte_pyramid.jpeg') }}" alt="Pyramides d'Égypte">
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% set page_asset = 'pays/japon' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Japon - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/japon.css') }}">
+{% endblock %}
+
+{% block body %}
+<main>
+  <section class="hero">
+    <h1>Découvrez le Japon</h1>
+    <p>Explorez les merveilles de la culture japonaise, de la cuisine délicieuse et des paysages à couper le souffle.</p>
+    <p>Et son magnifique hymne national :</p>
+    <audio src="{{ asset('audio/Hymne_japonnais.mp3') }}" controls></audio>
+  </section>
+
+  <section>
+    <h2>À propos du Japon</h2>
+    <p>
+      Le Japon est un pays insulaire de l'Asie de l'Est, situé entre la mer du Japon et l'océan Pacifique, à l'est de la Chine, de la Corée du Sud, de la Corée du Nord et de la Russie, et au nord de Taïwan.<br>
+      Étymologiquement, les kanjis qui constituent le nom du Japon signifient « pays d'origine du Soleil » ; d'où le surnom « pays du soleil levant ». <br>
+      Le Japon forme, depuis 1945, un archipel de plus de 6 800 îles, dont les quatre principales sont Hokkaidō, Honshū, Shikoku et Kyūshū, représentant 95 % de la superficie du pays.<br>
+      L'archipel s'étend sur plus de 3 000 kilomètres. La plupart des îles sont montagneuses, parfois volcaniques. Le mont Fuji (3 776 m) est le plus haut sommet.
+    </p>
+    <p>Que vous soyez passionné d'histoire, amateur de cuisine, amoureux de la nature ou de littérature, le Japon a quelque chose à offrir à chacun.</p>
+  </section>
+
+  <section class="destinations">
+    <h2>Destinations au Japon</h2>
+    <ul>
+      <li class="dest1"><a href="https://visitokinawajapan.com/fr/">Okinawa</a></li>
+      <li class="dest1"><a href="https://www.japan.travel/fr/destinations/kyushu/nagasaki/nagasaki-city-and-around/">Nagasaki</a></li>
+      <li class="dest1"><a href="https://kyoto.travel/fr/">Kyoto</a></li>
+      <li class="dest1"><a href="https://www.japan.travel/fr/destinations/kansai/osaka/">Osaka</a></li>
+      <li class="dest1"><a href="https://www.japan.travel/fr/destinations/tokai/aichi/nagoya-station-and-around/">Nagoya</a></li>
+    </ul>
+  </section>
+
+  <section class="Photo">
+    <h2>Galerie Photo</h2>
+    <div class="gallery">
+      <img src="{{ asset('images/Japon_1.jpg') }}" alt="Image 1" height="175px" width="300px">
+      <img src="{{ asset('images/Japon_2.jpg') }}" alt="Image 2" height="175px" width="300px">
+      <img src="{{ asset('images/Japon_3.jpg') }}" alt="Image 3" height="175px" width="300px">
+      <img src="{{ asset('images/Japon_4.jpg') }}" alt="Image 4" height="175px" width="300px">
+    </div>
+  </section>
+</main>
+{% endblock %}

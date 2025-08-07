@@ -1,0 +1,68 @@
+@import url(importation.css);
+@keyframes translate{
+  from{transform: translateX(-10vw)}
+  to{transform: translateX(100vw)}
+}
+.avion{
+  animation-name: translate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f0;
+    color: 	#FFA500;
+    
+    background-image: url(../images/maroc.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+    }
+  section {
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  section h2 {
+    color: #c0392b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f4e7da;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  nav {
+    background-color: #C1272D; 
+  }
+  
+  nav a {
+    color: white; 
+    text-decoration: none;
+    background-color: transparent; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #007A33; 
+    color: white;
+  }

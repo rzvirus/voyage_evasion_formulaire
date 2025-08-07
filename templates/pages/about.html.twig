@@ -1,0 +1,26 @@
+{% set page_asset = 'pays/qsn' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Qui sommes-nous ? - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link ="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/qsn.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="mot_par_mot">
+  <p>🤣Nous sommes une ligue de petits troublions🤣</p>
+</div>
+
+<footer>
+  <img src="{{ asset('images/qsn.png') }}" alt="image de saut" />
+  <p>
+    Développeurs à nos heures perdues :<br />
+    Kellyan, Raphael, Paulin, Valentin, Mohamed, Gilbert,<br />
+    et Léa.
+  </p>
+</footer>
+{% endblock %}

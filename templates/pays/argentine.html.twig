@@ -1,0 +1,45 @@
+{% set page_asset = 'pays/argentine' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Argentine - Voyage Évasion{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('styles/importation.css') }}">
+  <link rel="stylesheet" href="{{ asset('styles/argentine.css') }}">
+{% endblock %}
+
+{% block body %}
+  <main>
+    <h1>Destination : Argentine</h1>
+    <p>Un voyage entre immensité et émotions</p>
+
+    <section>
+      <h2>🌅 Des terres infinies</h2>
+      <p>
+        De la Terre de Feu au désert de sel de Salinas Grandes, explorez un pays aux paysages aussi vastes que variés.
+      </p>
+    </section>
+
+    <section>
+      <h2>🎶 Une âme musicale</h2>
+      <p>
+        Au rythme du tango dans les rues de Buenos Aires, vibrez au cœur d’une culture passionnée et authentique.
+      </p>
+    </section>
+
+    <section>
+      <h2>🍷 Saveurs et traditions</h2>
+      <p>
+        Goûtez à l'art de vivre argentin : asados, vins des Andes, et l'incontournable maté partagé avec les locaux.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Laissez-vous séduire par l'Argentine, là où chaque horizon raconte une nouvelle histoire.
+      </p>
+    </footer>
+  </main>
+{% endblock %}

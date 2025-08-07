@@ -1,0 +1,226 @@
+/* Animation avion reprise du style général */
+@keyframes translate {
+    from { transform: translateX(-10vw) }
+    to { transform: translateX(100vw) }
+}
+
+.avion {
+    animation-name: translate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 10px;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+/* Body avec le même gradient */
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2c0209 0%, #5e1e1a 50%, #8b4513 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal pour les pages d'authentification */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style des cartes avec effet verre */
+.auth-card {
+    background: rgba(139, 69, 19, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 245, 220, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    width: 100%;
+}
+
+.auth-card .card-header {
+    background: linear-gradient(135deg, rgba(162, 83, 14, 0.8), rgba(139, 69, 19, 0.8));
+    color: antiquewhite;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    border: none;
+}
+
+.auth-card .card-body {
+    padding: 30px;
+    color: antiquewhite;
+}
+
+/* Titres avec style evasion */
+.auth-title {
+    color: rgb(162, 83, 14);
+    text-shadow: 0px 0px 2px antiquewhite;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+/* Style des formulaires */
+.form-label {
+    color: antiquewhite;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+    background: rgba(245, 245, 220, 0.1);
+    border: 2px solid rgba(162, 83, 14, 0.5);
+    border-radius: 8px;
+    color: antiquewhite;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(245, 245, 220, 0.15);
+    border-color: rgb(162, 83, 14);
+    box-shadow: 0 0 0 0.2rem rgba(162, 83, 14, 0.25);
+    color: antiquewhite;
+}
+
+.form-control::placeholder {
+    color: rgba(245, 245, 220, 0.6);
+}
+
+/* Boutons avec style voyage */
+.btn-voyage {
+    background: linear-gradient(135deg, rgb(162, 83, 14), rgba(139, 69, 19, 0.9));
+    border: none;
+    color: antiquewhite;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-voyage:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgb(162, 83, 14));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162, 83, 14, 0.3);
+    color: antiquewhite;
+}
+
+.btn-voyage:focus {
+    box-shadow: 0 0 0 0.2rem rgba(162, 83, 14, 0.5);
+}
+
+/* Style des alertes */
+.alert-danger {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    color: #ffb3ba;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.alert-success {
+    background: rgba(25, 135, 84, 0.1);
+    border: 1px solid rgba(25, 135, 84, 0.5);
+    color: #b3ffb3;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.alert-warning {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.5);
+    color: #fff3b3;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/* Liens avec style voyage */
+.auth-link {
+    color: rgb(162, 83, 14);
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px antiquewhite;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    color: antiquewhite;
+    text-shadow: 0px 0px 2px rgb(162, 83, 14);
+    text-decoration: underline;
+}
+
+/* Style pour l'espace membre */
+.membre-container {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.membre-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.membre-welcome {
+    color: antiquewhite;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+}
+
+.membre-subtitle {
+    color: rgb(162, 83, 14);
+    font-size: 18px;
+    text-shadow: 0px 0px 1px antiquewhite;
+}
+
+/* Cards pour l'espace membre */
+.membre-card {
+    background: rgba(139, 69, 19, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 245, 220, 0.3);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    color: antiquewhite;
+}
+
+.membre-card .card-header {
+    background: linear-gradient(135deg, rgba(162, 83, 14, 0.6), rgba(139, 69, 19, 0.6));
+    border-radius: 15px 15px 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 10px;
+    }
+    
+    .auth-card {
+        margin: 10px;
+    }
+    
+    .auth-title {
+        font-size: 24px;
+    }
+}
